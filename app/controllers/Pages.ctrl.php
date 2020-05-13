@@ -6,7 +6,8 @@
         }
 
         public function Index(){
-             $this->View("pages/index");
+            $datos = ['titulo' => 'Parametros'];
+             $this->View("pages/index", $datos);
         }
     }
 ?>

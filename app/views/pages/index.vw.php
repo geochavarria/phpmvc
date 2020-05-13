@@ -1,1 +1,3 @@
-<h1>Inicio </h1>
+<?php
+    echo "<h1>$data[titulo]</h1>"
+?>
