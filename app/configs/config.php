@@ -2,7 +2,7 @@
      
      define('APP_PATH',dirname(dirname(__FILE__)));
 
-     define('URL_PATH','_URL_');
-     define('SITE_NAME','_NOMBRE_');
+     define('URL_PATH','http://localhost:81/mvc');
+     define('SITE_NAME','Mi Sitio MVC');
 
 ?>

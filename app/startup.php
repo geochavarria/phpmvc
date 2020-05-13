@@ -3,6 +3,6 @@
     require_once 'configs/config.php';
  
     spl_autoload_register(function($nameClass){
-        require_once 'libraries/'.$nameClass.'.gi php';
+        require_once 'libraries/'.$nameClass.'.php';
     })
 ?>
