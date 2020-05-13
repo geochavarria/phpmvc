@@ -1,12 +1,12 @@
 <?php
     
-    class Pages{
+    class Pages extends Controller{
         public function __construct(){
            // echo 'Controlador paginas cargar';
         }
 
-        public function One($dm){
-            echo $dm;
+        public function Index(){
+             $this->View("pages/index");
         }
     }
 ?>

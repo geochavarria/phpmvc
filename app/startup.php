@@ -1,6 +1,6 @@
 <?php
     //Load Library
-    require_once 'library/Connection.php';
-    require_once 'library/Controller.php';
-    require_once 'library/Core.php';
+    require_once '../app/libraries/Connection.php';
+    require_once '../app/libraries/Controller.php';
+    require_once '../app/libraries/Core.php';
 ?>

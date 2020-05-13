@@ -5,21 +5,21 @@
 
     class Core{
         protected $currentController ="Pages";
-        protected $currentMethod = "index";
+        protected $currentMethod = "Index";
         protected $parameters = [];
 
         public function __construct(){
             $url = $this->getUrl();
 
             //Controller Exists
-            if(file_exists('../app/controller/'.ucwords($url[0].'.ctrl.php')))
+            if(file_exists('../app/controllers/'.ucwords($url[0].'.ctrl.php')))
             {
                 $this->currentController = ucwords($url[0]);
                 
                 unset($url[0]);
             }
 
-            require_once '../app/controller/'.$this->currentController.'.ctrl.php';
+            require_once '../app/controllers/'.$this->currentController.'.ctrl.php';
             $this->currentController = new $this->currentController;
         
             //Method Validate
