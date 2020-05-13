@@ -5,7 +5,7 @@
 
     class Core{
         protected $currentController ="Pages";
-        protected $currentMethod = "index.php";
+        protected $currentMethod = "index";
         protected $parameters = [];
 
         public function __construct(){
@@ -21,6 +21,19 @@
 
             require_once '../app/controller/'.$this->currentController.'.ctrl.php';
             $this->currentController = new $this->currentController;
+        
+            //Method Validate
+            if(isset($url[1])){
+                if(method_exists($this->currentController,$url[1])){
+                    $this->currentMethod = $url[1];
+                    unset($url[1]);
+                }
+            }
+
+           $this->parameters = $url ? array_values($url): [];
+
+           call_user_func_array([$this->currentController, $this->currentMethod], $this->parameters);
+
         }
 
         public function getUrl(){
