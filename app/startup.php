@@ -1,6 +1,8 @@
 <?php
     //Load Library
-    require_once '../app/libraries/Connection.php';
-    require_once '../app/libraries/Controller.php';
-    require_once '../app/libraries/Core.php';
+    require_once 'configs/config.php';
+ 
+    spl_autoload_register(function($nameClass){
+        require_once 'libraries/'.$nameClass.'.gi php';
+    })
 ?>
